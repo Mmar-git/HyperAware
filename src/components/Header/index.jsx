@@ -22,7 +22,7 @@ const menu = {
     }
 }
 
-export default function index() {
+export default function Index() {
     const [isActive, setIsActive] = useState(false);
     return (
         <div className={styles.header}>

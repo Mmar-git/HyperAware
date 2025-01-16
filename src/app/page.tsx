@@ -216,9 +216,11 @@ const Page = () => {
               "/clients/twistbaby.jpg",
               "/clients/maple.jpg",
             ].map((src, index) => (
-              <div className="w-[6rem] md:w-[12rem] h-[6rem] rounded-lg overflow-hidden glass">
+              <div
+                key={index}
+                className="w-[6rem] md:w-[12rem] h-[6rem] rounded-lg overflow-hidden glass"
+              >
                 <Image
-                  key={index}
                   className="w-full h-full object-contain"
                   src={src}
                   alt={`logo-${index}`}

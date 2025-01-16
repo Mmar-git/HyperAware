@@ -259,9 +259,9 @@ const Page = () => {
                   Tailored Visual Storytelling
                 </h2>
                 <p className="font-light text-xs sm:text-sm md:text-sm">
-                  We focus on creating content that aligns with your brand's
-                  voice, helping you connect with your audience in a meaningful
-                  way.
+                  We focus on creating content that aligns with your
+                  brand&apos;s voice, helping you connect with your audience in
+                  a meaningful way.
                 </p>
               </ItemLayout>
               {/* Second Item Layout without paragraph (to test auto width/height change) */}

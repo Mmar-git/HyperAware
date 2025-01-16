@@ -12,7 +12,7 @@ import Loader from "@/components/Loader"; // Import the loader component
 const phrase =
   "At HyperAware, we specialize in creating and redesigning websites that not only look great but also perform seamlessly. Whether you're building a new online presence or refreshing an existing one, our team of skilled developers and designers work closely with you to bring your vision to life.";
 
-const page = () => {
+const Page = () => {
   const refs = useRef<(HTMLSpanElement | null)[]>([]);
   const body = useRef<HTMLDivElement | null>(null);
   const container = useRef<HTMLDivElement | null>(null);
@@ -273,4 +273,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

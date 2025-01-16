@@ -283,7 +283,7 @@ const Page: React.FC = () => {
                 {/* Interests Section */}
                 <div className="w-full flex flex-wrap mt-4 gap-4">
                   <label className="block text-gray-400 mb-2 w-full">
-                    I'm interested in...
+                    I&apos;m interested in...
                   </label>
                   <div className="flex flex-wrap gap-4">
                     {interests.map((interest) => (

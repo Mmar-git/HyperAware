@@ -205,9 +205,9 @@ const Page = () => {
                 </h2>
                 <p className="font-light text-xs sm:text-sm md:text-sm">
                   We create a memorable logo and visual identity that
-                  encapsulates your brand’s personality. Whether it's minimalist
-                  or bold, your logo will resonate with your target market and
-                  leave a lasting impression.
+                  encapsulates your brand&apos;s personality. Whether it&apos;s
+                  minimalist or bold, your logo will resonate with your target
+                  market and leave a lasting impression.
                 </p>
               </ItemLayout>
               {/* Second Item Layout without paragraph (to test auto width/height change) */}

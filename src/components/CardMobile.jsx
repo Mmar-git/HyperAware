@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { projects } from "@/data"; // Import the data from data.js
-
+import Image from "next/image";
 const CardMobile = () => {
   return (
     <div className="flex flex-col gap-8 px-4 py-8">
@@ -25,10 +25,12 @@ const CardMobile = () => {
 
           {/* Card Image */}
           <div className="w-full h-64 overflow-hidden rounded-lg mb-4">
-            <img
+            <Image
               src={`/images/${project.src}`} // Image path, ensure the images are stored in the public folder
               alt={project.title}
               className="w-full h-full object-cover"
+              height={1000}
+              width={1000}
             />
           </div>
 

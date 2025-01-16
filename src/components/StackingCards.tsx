@@ -89,10 +89,12 @@ const ServicesShowcase = () => {
               </a>
             </div>
             <div className="w-1/2">
-              <img
+              <Image
                 src={service.image}
                 alt={service.title}
                 className="w-full h-full h-auto mb-4 rounded-lg"
+                width={1000}
+                height={1000}
               />
             </div>
           </div>
