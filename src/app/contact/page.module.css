@@ -1,0 +1,13 @@
+.background {
+    position: fixed; /* Fixed to the viewport */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/backgrounds/herobg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; /* Make sure the image covers the entire screen */
+    z-index: -1; /* Make sure the image stays in the background */
+    opacity: 1;
+  }

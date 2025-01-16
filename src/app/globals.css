@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+::-webkit-scrollbar{
+  width: 8px;
+}
+::-webkit-scrollbar-track{
+  background: black;
+}
+::-webkit-scrollbar-thumb{
+  background: #04D9FF;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background: #03bcf4;
+}
+.glass {
+  background: rgba(255, 255, 255, 0.1); /* Use a simpler transparent background */
+  backdrop-filter: blur(5px); /* Reduced blur intensity for better performance */
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 15px; /* Slightly smaller radius for better rendering */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Lighter border for reduced complexity */
+ 
+
+}
+
+
+@keyframes glow-border {
+  0%, 100% {
+    box-shadow: 0 0 10px #0e3742, 0 0 20px #03bcf4, 0 0 40px #03bcf4, 0 0 80px #03bcf4;
+  }
+}
+.glow-border {
+  animation: glow-border 1.5s infinite alternate;
+}
+
+@keyframes flicker {
+  0%, 15%, 30%, 60%, 100% {
+    color: #0e3742; /* Lights off */
+    text-shadow: none;
+  }
+  16%, 31%, 61% {
+    color: #fff; /* Lights on */
+    text-shadow: 0 0 10px #03bcf4,
+                 0 0 20px #03bcf4,
+                 0 0 40px #03bcf4,
+                 0 0 80px #03bcf4,
+                 0 0 160px #03bcf4;
+  }
+}
+.custom-bg {
+  background-color: rgba(var(#FFFFFF), 0.2); /* Replace `--tw-color-background` with your color */
+  border: 1px solid rgba(var(#FFFFFF), 0.3); /* Replace `--tw-color-accent` with your accent color */
+  backdrop-filter: blur(3px);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Adjust shadow values as needed */
+}
+.buttonglow:hover{
+  animation: glow 1.5s infinite alternate;
+  text-shadow: 0 0 10px #03bcf4,
+               0 0 20px #03bcf4,
+               0 0 40px #03bcf4,
+               0 0 80px #03bcf4,
+               0 0 160px #03bcf4;
+}
+.custom-bg:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adjust hover shadow */
+}
+/* Permanent glowing state */
+@keyframes glow {
+  0%, 100% {
+    color: #fff;
+    text-shadow: 0 0 10px #03bcf4,
+                 0 0 20px #03bcf4,
+                 0 0 40px #03bcf4,
+                 0 0 80px #03bcf4,
+                 0 0 160px #03bcf4;
+  }
+}
+a:hover {
+  animation: glow 1.5s infinite alternate;
+  text-shadow: 0 0 10px #03bcf4,
+               0 0 20px #03bcf4,
+               0 0 40px #03bcf4,
+               0 0 80px #03bcf4,
+               0 0 160px #03bcf4;
+}
+
+.flicker {
+  animation: flicker 2s ease-in-out;
+}
+
+.glow {
+  animation: glow 1s infinite linear;
+}
+
+body{
+  background-color:#040404;
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  
+  scroll-behavior: smooth;
+}
+
+.botton{
+margin: 0 auto;
+padding:2em;
+background:#1c1f2b;
+text-align: center;
+border-radius: 10px;
+position: relative
+}
+.botton::after, .botton::before{
+  content:'';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(transparent 90%,blue);
+  top: 50%;
+  left: 50%; 
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 3px;
+  border-radius: 10px;
+}
+.botton::before{
+  filter: blur(1.5rem);
+  opacity: 0.5;}
+.botton:hover{
+  z-index: 0;
+    box-shadow: 40px 0 100px #008cff;
+  }
+
+  

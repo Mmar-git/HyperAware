@@ -1,0 +1,14 @@
+.reveal-circle {
+    background: transparent;
+    border: 4px solid transparent;
+    border-image-source: linear-gradient(90deg, #007cf0, #00dfd8);
+    border-image-slice: 1;
+    box-shadow: 0 0 20px rgba(0, 123, 240, 0.8), 0 0 30px rgba(0, 223, 216, 0.8);
+    pointer-events: none;
+  }
+  
+  .card-content {
+    clip-path: circle(100% at 50% 50%);
+    transition: clip-path 0.5s ease-out;
+  }
+  

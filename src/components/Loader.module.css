@@ -1,0 +1,35 @@
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000; /* Black background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .logo {
+    margin-bottom: 2rem;
+    height: 4rem;
+    width: 4rem;
+  }
+  
+  .progressBar {
+    width: 20%;
+    height: 4px;
+    background-color: #333;
+    overflow: hidden;
+    border-radius: 2px;
+    position: relative;
+  }
+  
+  .progress {
+    height: 100%;
+    background-color: #fff;
+    transition: width 0.1s ease-in-out; /* Smooth transition for width */
+  }
+  
