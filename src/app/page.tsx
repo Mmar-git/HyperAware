@@ -9,7 +9,6 @@ import { projects } from "@/data";
 import Card from "@/components/Card"; // This is your Card component with the parallax effect
 import CardMobile from "@/components/CardMobile"; // New CardMobile component for small screens
 import { useScroll } from "framer-motion";
-import Lenis from "@studio-freight/lenis";
 import Loader from "@/components/Loader"; // Import the loader
 
 const Page = () => {
@@ -53,37 +52,6 @@ const Page = () => {
   }, []);
 
   // Initialize or destroy Lenis based on screen size
-  useEffect(() => {
-    let lenis: Lenis | null = null;
-
-    if (enableLenis) {
-      lenis = new Lenis();
-
-      // Define the animation frame function
-      const raf = (time: number) => {
-        if (lenis) {
-          lenis.raf(time);
-          requestAnimationFrame(raf);
-        }
-      };
-
-      requestAnimationFrame(raf); // Start the animation frame loop
-    } else {
-      // Restore native scrolling for larger screens
-      document.documentElement.style.scrollBehavior = "auto";
-      document.body.style.overflow = "auto";
-    }
-
-    return () => {
-      if (lenis) {
-        lenis.destroy(); // Destroy Lenis instance when disabling
-        lenis = null;
-      }
-      // Always ensure native scrolling is restored
-      document.documentElement.style.scrollBehavior = "auto";
-      document.body.style.overflow = "auto";
-    };
-  }, [enableLenis]); // Re-run effect when `enableLenis` changes
 
   // Simulate loading time for demo purposes
   useEffect(() => {
@@ -97,24 +65,21 @@ const Page = () => {
   return (
     <>
       {isLoading ? (
-        <Loader /> // Show loader while loading
+        <Loader />
       ) : (
-        <div
-          className={`${isSmallScreen ? "overflow-hidden" : ""}`}
-          style={{ overflow: isSmallScreen ? "hidden" : "visible" }} // Apply overflow conditionally
-        >
+        <div className="w-full max-w-screen mx-auto overflow-hidden md:overflow-visible">
           {shouldRenderBackground ? (
-            <Background /> // Render background animation only on high-end, larger devices
+            <Background />
           ) : (
-            <div className={styles.background} /> // Fallback static background for low-end or smaller devices
+            <div className={styles.background} />
           )}
 
-          <div className="flex flex-col h-screen justify-center items-center text-[#FFFFFF] px-4">
+          <div className="flex flex-col h-screen justify-center items-center text-[#FFFFFF] px-2 mx-auto">
             <h1
-              className="hidden md:flex text-[3rem] lg:text-[7rem] text-center cursor-default"
+              className="hidden md:flex text-[2.5rem] lg:text-[6.5rem] text-center cursor-default"
               style={{ fontFamily: "'Koulen', sans-serif" }}
             >
-              STAY AHEAD. <span className="mx-4">STAY</span>
+              STAY AHEAD. <span className="mx-2">STAY</span>
               <span
                 className={`${isGlowing ? "glow" : "flicker"} text-[#0e3742]`}
               >
@@ -122,13 +87,13 @@ const Page = () => {
               </span>
             </h1>
             <h1
-              className="flex md:hidden text-[3rem] lg:text-[7rem] text-center cursor-default"
+              className="flex md:hidden text-[2.5rem] lg:text-[6.5rem] text-center cursor-default"
               style={{ fontFamily: "'Koulen', sans-serif" }}
             >
               STAY AHEAD. STAY HYPERAWARE
             </h1>
             <p
-              className="text-md lg:text-2xl text-center max-w-2xl cursor-default"
+              className="text-sm lg:text-xl text-center max-w-xl cursor-default"
               style={{ fontFamily: "'Poppins', sans-serif" }}
             >
               Emphasize the agency’s expertise in anticipating trends Creating
@@ -136,9 +101,9 @@ const Page = () => {
             </p>
           </div>
 
-          <div className="flex flex-col items-center text-[#FFFFFF] px-4">
+          <div className="flex flex-col items-center text-[#FFFFFF] px-2 mx-auto">
             <h1
-              className="text-[3rem] lg:text-[7rem] text-center cursor-default"
+              className="text-[2.5rem] lg:text-[6.5rem] text-center cursor-default"
               style={{ fontFamily: "'Koulen', sans-serif" }}
             >
               WHAT WE{" "}
@@ -149,7 +114,7 @@ const Page = () => {
               </span>
             </h1>
             <p
-              className="text-md lg:text-2xl text-center max-w-4xl cursor-default"
+              className="text-sm lg:text-xl text-center max-w-3xl cursor-default"
               style={{ fontFamily: "'Poppins', sans-serif" }}
             >
               Drive measurable results with cutting-edge strategies tailored to
@@ -157,7 +122,10 @@ const Page = () => {
               amplify your digital presence.
             </p>
 
-            <main ref={container} className={`${styles.main} w-full max-w-5xl`}>
+            <main
+              ref={container}
+              className={`${styles.main} w-full max-w-screen mx-auto`}
+            >
               {projects.map((project, i) => {
                 const targetScale = 1 - (projects.length - i) * 0.05;
                 return (
@@ -176,9 +144,9 @@ const Page = () => {
 
           {isSmallScreen && <CardMobile />}
 
-          <div className="flex flex-col items-center text-[#FFFFFF] px-4">
+          <div className="flex flex-col items-center text-[#FFFFFF] px-2 mx-auto">
             <h1
-              className="text-[3rem] lg:text-[7rem] text-center cursor-default"
+              className="text-[2.5rem] lg:text-[6.5rem] text-center cursor-default"
               style={{ fontFamily: "'Koulen', sans-serif" }}
             >
               LEVEL UP YOUR{" "}
@@ -189,7 +157,7 @@ const Page = () => {
               </span>
             </h1>
             <p
-              className="text-md lg:text-2xl text-center max-w-4xl cursor-default"
+              className="text-sm lg:text-xl text-center max-w-3xl cursor-default"
               style={{ fontFamily: "'Poppins', sans-serif" }}
             >
               Attract more clients, serve them better and keep them longer.
@@ -198,27 +166,23 @@ const Page = () => {
           </div>
 
           <h1
-            className="text-[3rem] lg:text-[7rem] text-[#FFFFFF] text-center cursor-default"
+            className="text-[2.5rem] lg:text-[6.5rem] text-[#FFFFFF] text-center cursor-default"
             style={{ fontFamily: "'Koulen', sans-serif" }}
           >
             MEET OUR CUSTOMERS
           </h1>
-          <div className="flex flex-wrap gap-4 justify-center items-center px-6 py-4">
+          <div className="flex flex-wrap gap-2 justify-center items-center px-4 py-2 mx-auto">
             {[
               "/clients/dtd.jpg",
               "/clients/luvlap.jpg",
               "/clients/tripti.jpg",
               "/clients/kinderchoice.jpg",
-              "/clients/sweetcherry.jpg",
               "/clients/youmaa.jpg",
               "/clients/heroto.jpg",
-              "/clients/fiori.jpg",
-              "/clients/twistbaby.jpg",
-              "/clients/maple.jpg",
             ].map((src, index) => (
               <div
                 key={index}
-                className="w-[6rem] md:w-[12rem] h-[6rem] rounded-lg overflow-hidden glass"
+                className="w-[5rem] md:w-[10rem] h-[5rem] rounded-lg overflow-hidden glass"
               >
                 <Image
                   className="w-full h-full object-contain"

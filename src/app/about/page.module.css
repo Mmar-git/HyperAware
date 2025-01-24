@@ -3,7 +3,7 @@
     height: 100vh;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+  
     color: rgb(211, 211, 211);
 }
 
@@ -19,6 +19,7 @@
     border-radius: 20px;
     border:1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    overflow: hidden;
 }
 
 .body p{
@@ -37,7 +38,7 @@
     left: 0;
     width: 100vw; /* Ensure it spans the entire viewport width */
     height: 100vh; /* Ensure it spans the entire viewport height */
-    background-image: url('/backgrounds/aboutbg.png');
+    background-image: url('/backgrounds/herobg.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; /* Ensures it covers the entire area proportionally */
@@ -54,7 +55,7 @@
      .body {
         
        text-align: center;
-       width: 24rem;
+       width: 40rem;
        padding: 3rem;
        display: flex;
        height: 70%;
@@ -66,6 +67,50 @@
        font-size: 1rem;
        font-weight: 700;
        margin: 0; /* Remove default margin to reduce gaps */
-       line-height: 1.2; /* Tighten the line height for smaller screens */
+       line-height: 1; /* Tighten the line height for smaller screens */
+     }
+   }
+  @media (max-width: 650px) {
+    .main{
+     margin-top:-12rem;
+    }
+     .body {
+        
+       text-align: center;
+       width: 28rem;
+       padding: 3rem;
+       display: flex;
+       height: 70%;
+       justify-content: center; /* Center items vertically */
+       align-items: center; /* Center items horizontally */
+       gap: 1rem; /* Add controlled spacing between lines */
+     }
+     .body p {
+       font-size: 0.9rem;
+       font-weight: 700;
+       margin: 0; /* Remove default margin to reduce gaps */
+       line-height: 1; /* Tighten the line height for smaller screens */
+     }
+   }
+  @media (max-width: 450px) {
+    .main{
+     margin-top:-12rem;
+    }
+     .body {
+        
+       text-align: center;
+       width: 20rem;
+       padding: 3rem;
+       display: flex;
+       height: 70%;
+       justify-content: center; /* Center items vertically */
+       align-items: center; /* Center items horizontally */
+       gap: 1rem; /* Add controlled spacing between lines */
+     }
+     .body p {
+       font-size: 0.7rem;
+       font-weight: 700;
+       margin: 0; /* Remove default margin to reduce gaps */
+       line-height: 0.8; /* Tighten the line height for smaller screens */
      }
    }

@@ -38,7 +38,7 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
         <Navicons />
         <Link href="/contact">
           <button className="px-4 py-2 text-white font-bold glass">
-            Start Now
+            Start Your Project
           </button>
         </Link>
       </div>

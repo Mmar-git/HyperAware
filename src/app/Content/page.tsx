@@ -1,11 +1,10 @@
 "use client";
 import styles from "./page.module.css";
-import BackgroundContent from "@/components/BackgroundContent";
+import Background from "@/components/Background";
 import React, { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ItemLayout from "@/components/ItemLayout";
-import Lenis from "@studio-freight/lenis";
 import Loader from "@/components/Loader";
 
 const phrase =
@@ -29,30 +28,6 @@ const Page = () => {
   }, [isLoading]);
 
   // Initialize or destroy Lenis based on screen size
-  useEffect(() => {
-    let lenis: Lenis | null = null;
-
-    if (enableLenis) {
-      lenis = new Lenis();
-
-      const raf = (time: number) => {
-        lenis?.raf(time);
-        requestAnimationFrame(raf);
-      };
-
-      requestAnimationFrame(raf);
-    } else {
-      // Restore native scrolling for larger screens
-      document.documentElement.style.scrollBehavior = "auto";
-      document.body.style.overflow = "auto";
-    }
-
-    return () => {
-      lenis?.destroy();
-      document.documentElement.style.scrollBehavior = "auto";
-      document.body.style.overflow = "auto";
-    };
-  }, [enableLenis]);
 
   // Create GSAP animations
   const createAnimation = () => {
@@ -131,7 +106,7 @@ const Page = () => {
         <div>
           <div className="overflow-hidden flex flex-col items-center">
             {shouldRenderBackground ? (
-              <BackgroundContent /> // Render background animation only on high-end, larger devices
+              <Background /> // Render background animation only on high-end, larger devices
             ) : (
               <div className={styles.background} /> // Fallback static background for low-end or smaller devices
             )}

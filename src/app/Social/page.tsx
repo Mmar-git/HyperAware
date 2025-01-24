@@ -4,8 +4,7 @@ import React, { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ItemLayout from "@/components/ItemLayout";
-import BackgroundSocial from "@/components/BackgroundSocial";
-import Lenis from "@studio-freight/lenis";
+import Background from "@/components/Background";
 import Loader from "@/components/Loader"; // Import the loader component
 
 const phrase =
@@ -28,39 +27,6 @@ const Page = () => {
       createAnimation();
     }
   }, [isLoading]);
-
-  // Initialize or destroy Lenis based on screen size
-  useEffect(() => {
-    let lenis: Lenis | null = null;
-
-    if (enableLenis) {
-      lenis = new Lenis();
-
-      // Define the animation frame function
-      const raf = (time: number) => {
-        if (lenis) {
-          lenis.raf(time);
-          requestAnimationFrame(raf);
-        }
-      };
-
-      requestAnimationFrame(raf); // Start the animation frame loop
-    } else {
-      // Restore native scrolling for larger screens
-      document.documentElement.style.scrollBehavior = "auto";
-      document.body.style.overflow = "auto";
-    }
-
-    return () => {
-      if (lenis) {
-        lenis.destroy(); // Destroy Lenis instance when disabling
-        lenis = null;
-      }
-      // Ensure native scrolling is restored
-      document.documentElement.style.scrollBehavior = "auto";
-      document.body.style.overflow = "auto";
-    };
-  }, [enableLenis]); // Re-run effect when `enableLenis` changes
 
   const createAnimation = () => {
     if (container.current && refs.current.length) {
@@ -145,7 +111,7 @@ const Page = () => {
         <div>
           <div className="overflow-hidden flex flex-col items-center">
             {shouldRenderBackground ? (
-              <BackgroundSocial /> // Render background animation only on high-end, larger devices
+              <Background /> // Render background animation only on high-end, larger devices
             ) : (
               <div className={styles.background} /> // Fallback static background for low-end or smaller devices
             )}

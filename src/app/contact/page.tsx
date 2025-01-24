@@ -4,7 +4,6 @@ import emailjs from "emailjs-com";
 import Background from "@/components/Background";
 import Link from "next/link";
 import Image from "next/image";
-import Lenis from "@studio-freight/lenis";
 import styles from "./page.module.css";
 import Loader from "@/components/Loader"; // Import the loader component
 
@@ -47,39 +46,6 @@ const Page: React.FC = () => {
       window.removeEventListener("resize", checkDevicePerformance);
     };
   }, []);
-
-  // Enable or disable Lenis smooth scroll based on screen size
-  useEffect(() => {
-    let lenis: Lenis | null = null;
-
-    if (enableLenis) {
-      lenis = new Lenis();
-
-      // Define the animation frame function
-      const raf = (time: number) => {
-        if (lenis) {
-          lenis.raf(time);
-          requestAnimationFrame(raf);
-        }
-      };
-
-      requestAnimationFrame(raf); // Start the animation frame loop
-    } else {
-      // Restore native scrolling for larger screens
-      document.documentElement.style.scrollBehavior = "auto";
-      document.body.style.overflow = "auto";
-    }
-
-    return () => {
-      if (lenis) {
-        lenis.destroy(); // Destroy Lenis instance when disabling
-        lenis = null;
-      }
-      // Ensure native scrolling is restored
-      document.documentElement.style.scrollBehavior = "auto";
-      document.body.style.overflow = "auto";
-    };
-  }, [enableLenis]); // Re-run effect when `enableLenis` changes
 
   // Handle background rendering based on performance
   useEffect(() => {

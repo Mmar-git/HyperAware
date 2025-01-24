@@ -24,7 +24,7 @@ const Loader = () => {
   return (
     <div className={styles.loader}>
       <div className={styles.logo}>
-        <Image src="/logo.png" alt="Logo" width={700} height={700} />
+        <Image src="/Logo.png" alt="Logo" width={700} height={700} />
       </div>
       <div className={styles.progressBar}>
         <div

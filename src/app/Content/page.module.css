@@ -37,7 +37,7 @@
     left: 0;
     width: 100vw; /* Ensure it spans the entire viewport width */
     height: 100vh; /* Ensure it spans the entire viewport height */
-    background-image: url('/backgrounds/contentbg.png');
+    background-image: url('/backgrounds/herobg.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; /* Ensures it covers the entire area proportionally */

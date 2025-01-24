@@ -1,6 +1,6 @@
 "use client";
 import styles from "./page.module.css";
-import BackgroundAbout from "@/components/BackgroundAbout";
+import Background from "@/components/Background";
 import React, { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -8,6 +8,7 @@ import ItemLayout from "@/components/ItemLayout";
 import Modal from "@/components/modal";
 import Project from "@/components/project";
 import Lenis from "@studio-freight/lenis";
+import Image from "next/image";
 import Link from "next/link";
 import Loader from "@/components/Loader"; // Importing the loader component
 
@@ -18,7 +19,7 @@ const projects = [
   { title: "SweetCherry", src: "clients/sweetcherry.jpg" },
   { title: "DeartoDad", src: "clients/dtd.jpg" },
   { title: "Fiori", src: "clients/fiori.jpg" },
-  { title: "HeroTo", src: "clients/heroto.jpg" },
+  { title: "Heroto", src: "clients/heroto.jpg" },
   { title: "Maple", src: "clients/maple.jpg" },
   { title: "Twist Baby", src: "clients/twistbaby.jpg" },
   { title: "Youma", src: "clients/youmaa.jpg" },
@@ -57,39 +58,6 @@ const Page = () => {
       });
     }
   };
-
-  // Initialize Lenis for smooth scrolling on small screens
-  useEffect(() => {
-    let lenis: Lenis | null = null;
-
-    if (enableLenis) {
-      lenis = new Lenis();
-
-      // Define the animation frame function
-      const raf = (time: number) => {
-        if (lenis) {
-          lenis.raf(time);
-          requestAnimationFrame(raf);
-        }
-      };
-
-      requestAnimationFrame(raf); // Start the animation frame loop
-    } else {
-      // Restore native scrolling for larger screens
-      document.documentElement.style.scrollBehavior = "auto";
-      document.body.style.overflow = "auto";
-    }
-
-    return () => {
-      if (lenis) {
-        lenis.destroy(); // Destroy Lenis instance when disabling
-        lenis = null;
-      }
-      // Ensure native scrolling is restored
-      document.documentElement.style.scrollBehavior = "auto";
-      document.body.style.overflow = "auto";
-    };
-  }, [enableLenis]); // Re-run effect when `enableLenis` changes
 
   // Device performance check for background rendering
   useEffect(() => {
@@ -160,13 +128,13 @@ const Page = () => {
         <div>
           <div className="overflow-hidden flex flex-col items-center">
             {shouldRenderBackground ? (
-              <BackgroundAbout /> // Render background animation only on high-end, larger devices
+              <Background /> // Render background animation only on high-end, larger devices
             ) : (
               <div className={styles.background} /> // Fallback static background for low-end or smaller devices
             )}
             <div className="flex flex-col h-screen w-screen justify-center items-center text-[#FFFFFF]">
               <h1
-                className="text-[3rem] text-center lg:text-[7rem] cursor-default"
+                className="text-[3rem] text-center md:text-[5rem] lg:text-[7rem] cursor-default"
                 style={{
                   fontFamily: "'Koulen', sans-serif",
                 }}
@@ -240,7 +208,7 @@ const Page = () => {
               </ItemLayout>
             </section>
 
-            <div className="glass p-10 lg:p-24 text-[#ffffff] w-[24rem] lg:w-[64rem] flex flex-col items-center">
+            <div className="hidden md:flex glass p-10 lg:p-24 text-[#ffffff] w-[24rem] lg:w-[64rem] flex flex-col items-center">
               <h2 className="text-4xl font-semibold pb-10">Our Clients</h2>
               {projects.map((project, index) => {
                 return (
@@ -254,6 +222,89 @@ const Page = () => {
               })}
             </div>
             <Modal modal={modal} projects={projects} />
+            <div
+              className="flex md:hidden p-10 w-[90vw] h-auto glass text-[#ffffff] flex flex-col p-12 "
+              style={{ fontFamily: "'Poppins', sans-serif" }}
+            >
+              <div className="flex py-4 px-4 justify-around items-center border-b border-gray-500">
+                <div className="h-[6rem] w-auto flex items-center">
+                  <Image
+                    src="/clients/sweetcherry.jpg"
+                    alt="image"
+                    width={1000}
+                    height={1000}
+                    className="h-full w-auto object-contain"
+                  />
+                </div>
+              </div>
+
+              <div className="flex py-10 px-4 justify-around items-center border-b border-gray-500">
+                <div className="h-[6rem] w-auto flex items-center">
+                  <Image
+                    src="/clients/dtd.jpg"
+                    alt="image"
+                    width={1000}
+                    height={1000}
+                    className="h-full w-auto object-contain"
+                  />
+                </div>
+              </div>
+              <div className="flex py-4 px-4 justify-around items-center border-b border-gray-500">
+                <div className="h-[6rem] w-auto flex items-center">
+                  <Image
+                    src="/clients/tripti.jpg"
+                    alt="image"
+                    width={1000}
+                    height={1000}
+                    className="h-full w-auto object-contain"
+                  />
+                </div>
+              </div>
+              <div className="flex py-4 px-4 justify-around items-center border-b border-gray-500">
+                <div className="h-[6rem] w-auto flex items-center">
+                  <Image
+                    src="/clients/kinderchoice.jpg"
+                    alt="image"
+                    width={1000}
+                    height={1000}
+                    className="h-full w-auto  object-contain"
+                  />
+                </div>
+              </div>
+              <div className="flex py-4 px-4  justify-around items-center border-b border-gray-500">
+                <div className="h-[6rem] w-auto flex items-center">
+                  <Image
+                    src="/clients/youmaa.jpg"
+                    alt="image"
+                    width={1000}
+                    height={1000}
+                    className="h-full w-auto object-contain"
+                  />
+                </div>
+              </div>
+              <div className="flex py-4 px-4 justify-around items-center border-b border-gray-500">
+                <div className="h-[6rem] w-auto flex items-center">
+                  <Image
+                    src="/clients/maple.jpg"
+                    alt="image"
+                    width={1000}
+                    height={1000}
+                    className="h-full w-auto object-contain"
+                  />
+                </div>
+              </div>
+              <div className="flex py-4 px-4 justify-around items-center border-b border-gray-500">
+                <div className="h-[6rem] w-auto flex items-center">
+                  <Image
+                    src="/clients/heroto.jpg"
+                    alt="image"
+                    width={1000}
+                    height={1000}
+                    className="h-full w-auto object-contain"
+                  />
+                </div>
+              </div>
+            </div>
             <div className="text-[#ffffff] p-10 flex flex-col justify-center items-center gap-3">
               <h2 className="text-4xl font-semibold">Get started Now!</h2>
               <p className="text-md">
