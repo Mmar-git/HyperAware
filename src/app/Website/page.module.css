@@ -3,22 +3,23 @@
     height: 80vh;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
     color: rgb(211, 211, 211);
     text-align: center;
 }
 
 .body{
-    width: 72rem;
-    height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10rem;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 20px;
-    border:1px solid rgba(255, 255, 255, 0.18);
+  width: 90vw;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  overflow: hidden;
 }
 
 .body p{
@@ -50,24 +51,68 @@
   
 
   @media (max-width: 768px) {
-   .main{
-    margin-top:-12rem;
+    .main{
+     margin-top:-12rem;
+    }
+     .body {
+        
+       text-align: center;
+   
+       padding: 3rem;
+       display: flex;
+       height: 70%;
+       justify-content: center; /* Center items vertically */
+       align-items: center; /* Center items horizontally */
+       gap: 1rem; /* Add controlled spacing between lines */
+     }
+     .body p {
+       font-size: 1rem;
+       font-weight: 700;
+       margin: 0; /* Remove default margin to reduce gaps */
+       line-height: 1; /* Tighten the line height for smaller screens */
+     }
    }
-    .body {
-      text-align: center;
-      width: 24rem;
-      padding: 3rem;
-      display: flex;
-      height: 70%;
-      justify-content: center; /* Center items vertically */
-      align-items: center; /* Center items horizontally */
-      gap: 1rem; /* Add controlled spacing between lines */
+  @media (max-width: 650px) {
+    .main{
+     margin-top:-12rem;
     }
-    .body p {
-      font-size: 1rem;
-      font-weight: 700;
-      margin: 0; /* Remove default margin to reduce gaps */
-      line-height: 1.2; /* Tighten the line height for smaller screens */
+     .body {
+        
+       text-align: center;
+    
+       padding: 3rem;
+       display: flex;
+       height: 70%;
+       justify-content: center; /* Center items vertically */
+       align-items: center; /* Center items horizontally */
+       gap: 1rem; /* Add controlled spacing between lines */
+     }
+     .body p {
+       font-size: 0.9rem;
+       font-weight: 700;
+       margin: 0; /* Remove default margin to reduce gaps */
+       line-height: 1; /* Tighten the line height for smaller screens */
+     }
+   }
+  @media (max-width: 450px) {
+    .main{
+     margin-top:-12rem;
     }
-  }
-  
+     .body {
+        
+       text-align: center;
+     
+       padding: 3rem;
+       display: flex;
+       height: 70%;
+       justify-content: center; /* Center items vertically */
+       align-items: center; /* Center items horizontally */
+       gap: 1rem; /* Add controlled spacing between lines */
+     }
+     .body p {
+       font-size: 0.7rem;
+       font-weight: 700;
+       margin: 0; /* Remove default margin to reduce gaps */
+       line-height: 0.8; /* Tighten the line height for smaller screens */
+     }
+   }

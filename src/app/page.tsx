@@ -169,7 +169,7 @@ const Page = () => {
             className="text-[2.5rem] lg:text-[6.5rem] text-[#FFFFFF] text-center cursor-default"
             style={{ fontFamily: "'Koulen', sans-serif" }}
           >
-            MEET OUR CUSTOMERS
+            MEET OUR CLIENTS
           </h1>
           <div className="flex flex-wrap gap-2 justify-center items-center px-4 py-2 mx-auto">
             {[

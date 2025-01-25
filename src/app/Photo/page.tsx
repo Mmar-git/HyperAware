@@ -120,7 +120,7 @@ const Page = () => {
             )}
             <div className="flex flex-col h-screen w-screen justify-center items-center text-[#FFFFFF]">
               <h1
-                className="text-[3rem] text-center lg:text-[5rem] cursor-default"
+                className="text-[2rem] text-center sm:text-[3rem] md:text-[4rem] lg:text-[5rem] cursor-default"
                 style={{
                   fontFamily: "'Koulen', sans-serif",
                 }}
@@ -148,8 +148,8 @@ const Page = () => {
                 </p>
               </div>
             </main>
-            <div className="w-full h-[130vh] p-8 sm:p-16 lg:px-24 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 gap-y-3 grid-flow-row-dense">
-              <div className="rounded-lg shadow-xl min-h-[200px] col-span-1 sm:col-span-2 row-span-2 relative">
+            <div className="w-full h-auto p-8 sm:p-16 lg:px-24 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 gap-y-3 grid-flow-row-dense">
+              <div className="rounded-lg shadow-xl min-h-[100vh] lg:min-h-[400px] col-span-1 sm:col-span-2 row-span-2 relative">
                 <video
                   className="absolute inset-0 w-full h-full object-cover rounded-lg"
                   autoPlay
@@ -165,7 +165,7 @@ const Page = () => {
               </div>
 
               <div
-                className="rounded-lg shadow-xl min-h-[200px]"
+                className="rounded-lg shadow-xl min-h-[100vh] lg:min-h-[300px]"
                 style={{
                   backgroundImage: "url('/content/kinderchoice3.jpg')",
                   backgroundSize: "cover",
@@ -173,7 +173,7 @@ const Page = () => {
                 }}
               />
 
-              <div className="rounded-lg shadow-xl min-h-[200px] row-span-2 relative">
+              <div className="rounded-lg shadow-xl min-h-[100vh] lg:min-h-[300px] row-span-2 relative">
                 <video
                   className="absolute inset-0 w-full h-full object-cover rounded-lg"
                   autoPlay
@@ -189,7 +189,7 @@ const Page = () => {
               </div>
 
               <div
-                className="rounded-lg shadow-xl min-h-[200px]"
+                className="rounded-lg shadow-xl min-h-[100vh] lg:min-h-[300px]"
                 style={{
                   backgroundImage: "url('/content/kinderchoice2.jpg')",
                   backgroundSize: "cover",
@@ -198,7 +198,7 @@ const Page = () => {
               />
 
               <div
-                className="rounded-lg shadow-xl min-h-[200px]"
+                className="rounded-lg shadow-xl min-h-[100vh] lg:min-h-[300px]"
                 style={{
                   backgroundImage: "url('/content/dear2.jpg')",
                   backgroundSize: "cover",
@@ -207,7 +207,7 @@ const Page = () => {
               />
             </div>
             <section
-              className="p-10 w-[450px] md:w-[1000px] lg:w-[1300px] gap-3 columns-1 sm:columns-2 lg:columns-3 xl:columns-3  space-y-3 text-[#ffffff]"
+              className="py-10 w-[90vw] gap-3 columns-1 sm:columns-2 lg:columns-3 xl:columns-3  space-y-3 text-[#ffffff]"
               style={{
                 fontFamily: "'Poppins', sans-serif",
               }}
@@ -244,7 +244,7 @@ const Page = () => {
                 </p>
               </ItemLayout>
             </section>
-            <div className="w-[24rem] lg:w-[76rem] h-[8rem] flex justify-center items-center px-10 lg:px-24 glass text-[#ffffff]">
+            <div className="w-[90vw] h-[8rem] flex justify-center items-center glass text-[#ffffff]">
               <h2
                 className="text-2xl lg:text-3xl"
                 style={{
@@ -255,7 +255,7 @@ const Page = () => {
               </h2>
             </div>
             <section
-              className="p-10 w-[450px] md:w-[1000px] lg:w-[1300px] gap-3 columns-1 sm:columns-2 lg:columns-3 xl:columns-3  space-y-3 text-[#ffffff]"
+              className="py-10 w-[90vw] gap-3 columns-1 sm:columns-2 lg:columns-3 xl:columns-3  space-y-3 text-[#ffffff]"
               style={{
                 fontFamily: "'Poppins', sans-serif",
               }}
@@ -293,7 +293,7 @@ const Page = () => {
             <div className="flex flex-wrap w-full">
               <div className="w-full lg:w-1/2 h-auto lg:h-[120vh] px-4 py-4 sm:px-8 lg:px-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div
-                  className="rounded-lg shadow-xl min-h-[200px] row-span-2"
+                  className="rounded-lg shadow-xl min-h-[100vh] lg:min-h-[300px] row-span-2"
                   style={{
                     backgroundImage: "url('/content/sweetcherry3.jpg')",
                     backgroundSize: "cover",
@@ -301,7 +301,7 @@ const Page = () => {
                   }}
                 />
                 <div
-                  className="rounded-lg shadow-xl min-h-[200px]"
+                  className="rounded-lg shadow-xl min-h-[100vh] lg:min-h-[300px]"
                   style={{
                     backgroundImage: "url('/content/dear1.jpg')",
                     backgroundSize: "cover",
@@ -309,14 +309,14 @@ const Page = () => {
                   }}
                 />
                 <div
-                  className=" rounded-lg shadow-xl min-h-[200px] row-span-2"
+                  className=" rounded-lg shadow-xl min-h-[100vh] lg:min-h-[300px] row-span-2"
                   style={{
                     backgroundImage: "url('/content/sweetcherry4.jpg')",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                   }}
                 />
-                <div className="rounded-lg shadow-xl min-h-[200px] relative">
+                <div className="rounded-lg shadow-xl min-h-[100vh] lg:min-h-[300px] relative">
                   {" "}
                   <video
                     className="absolute inset-0 w-full h-full object-cover rounded-lg "

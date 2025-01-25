@@ -77,7 +77,7 @@ const Footer = () => {
       }}
     >
       {/* DESKTOP */}
-      <div className="hidden md:flex gap-24">
+      <div className="hidden lg:flex gap-24">
         {/* LEFT */}
         <div className="w-full md:w-1/2 lg:w-1/4 flex flex-col gap-8">
           <Link href="/">
@@ -116,7 +116,7 @@ const Footer = () => {
         </div>
       </div>
       {/* MOBILE */}
-      <div className="flex md:hidden flex-col">
+      <div className="flex lg:hidden flex-col">
         {/* LEFT */}
         <Link href="/" className="flex justify-center items-center">
           <Image

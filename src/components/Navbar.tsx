@@ -37,7 +37,7 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
         </div>
         <Navicons />
         <Link href="/contact">
-          <button className="px-4 py-2 text-white font-bold glass">
+          <button className="px-4 py-2 text-white font-bold glass purple">
             Start Your Project
           </button>
         </Link>
@@ -46,13 +46,15 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
       {/* Mobile Navbar */}
       <div className="flex md:hidden px-4 py-6 flex items-center justify-between w-full h-auto absolute">
         <div className="flex items-center -mt-1 space-x-4">
-          <Image
-            src="/Logo.png"
-            alt="Logo"
-            width={1200}
-            height={1200}
-            className="w-[2rem] h-[2rem]"
-          />
+          <Link href={"/"}>
+            <Image
+              src="/Logo.png"
+              alt="Logo"
+              width={1200}
+              height={1200}
+              className="w-[2rem] h-[2rem]"
+            />
+          </Link>
         </div>
         <h1
           className="text-[2rem] text-center lg:text-[7rem] animation-moveUp"

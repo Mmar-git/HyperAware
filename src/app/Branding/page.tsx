@@ -119,7 +119,7 @@ const Page = () => {
             )}
             <div className="flex flex-col h-screen w-screen justify-center items-center text-[#FFFFFF]">
               <h1
-                className="text-[3rem] text-center lg:text-[5rem] cursor-default"
+                className="text-[2rem] text-center sm:text-[3rem] md:text-[4rem] lg:text-[5rem] cursor-default"
                 style={{
                   fontFamily: "'Koulen', sans-serif",
                 }}
@@ -148,7 +148,7 @@ const Page = () => {
               </div>
             </main>
             <section
-              className="p-10 w-[450px] md:w-[1000px] lg:w-[1300px] gap-3 columns-1 sm:columns-2 lg:columns-3 xl:columns-3  space-y-3 text-[#ffffff]"
+              className="py-10 w-[90vw] gap-3 columns-1 sm:columns-1 lg:columns-3 xl:columns-3  space-y-3 text-[#ffffff]"
               style={{
                 fontFamily: "'Poppins', sans-serif",
               }}
@@ -187,7 +187,7 @@ const Page = () => {
                 </p>
               </ItemLayout>
             </section>
-            <div className="w-[24rem] lg:w-[76rem] h-[8rem] flex justify-center items-center px-10 lg:px-24 glass text-[#ffffff]">
+            <div className="w-[90vw] h-[8rem] flex justify-center items-center glass text-[#ffffff]">
               <h2
                 className="text-2xl lg:text-3xl"
                 style={{
@@ -198,7 +198,7 @@ const Page = () => {
               </h2>
             </div>
             <section
-              className="p-10 w-[450px] md:w-[1000px] lg:w-[1300px] gap-3 columns-1 sm:columns-2 lg:columns-3 xl:columns-3  space-y-3 text-[#ffffff]"
+              className="py-10 w-[90vw] gap-3 columns-1 sm:columns-1 lg:columns-3 xl:columns-3  space-y-3 text-[#ffffff]"
               style={{
                 fontFamily: "'Poppins', sans-serif",
               }}

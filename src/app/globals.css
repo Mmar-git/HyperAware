@@ -86,7 +86,14 @@ a:hover {
                0 0 80px #03bcf4,
                0 0 160px #03bcf4;
 }
-
+.purple{
+  animation: glow 1.5s infinite alternate;
+  box-shadow: 0 0 10px #341539,
+               0 0 20px #341539,
+               0 0 40px #341539,
+               0 0 80px #341539,
+               0 0 160px #341539;
+}
 .flicker {
   animation: flicker 2s ease-in-out;
 }

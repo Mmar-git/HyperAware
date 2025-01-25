@@ -134,7 +134,7 @@ const Page = () => {
             )}
             <div className="flex flex-col h-screen w-screen justify-center items-center text-[#FFFFFF]">
               <h1
-                className="text-[3rem] text-center md:text-[5rem] lg:text-[7rem] cursor-default"
+                className="text-[3rem] text-center sm:text-[4rem] md:text-[5rem] lg:text-[7rem] cursor-default"
                 style={{
                   fontFamily: "'Koulen', sans-serif",
                 }}
@@ -164,7 +164,7 @@ const Page = () => {
               </div>
             </main>
             <section
-              className="p-10 w-[450px] md:w-[1000px] lg:w-[1300px] gap-3 columns-1 sm:columns-2 lg:columns-3 xl:columns-3  space-y-3 text-[#ffffff]"
+              className="py-10 w-[90vw] gap-3 columns-1 sm:columns-1 lg:columns-3 xl:columns-3  space-y-3 text-[#ffffff]"
               style={{
                 fontFamily: "'Poppins', sans-serif",
               }}
@@ -207,103 +207,38 @@ const Page = () => {
                 </p>
               </ItemLayout>
             </section>
-
-            <div className="hidden md:flex glass p-10 lg:p-24 text-[#ffffff] w-[24rem] lg:w-[64rem] flex flex-col items-center">
-              <h2 className="text-4xl font-semibold pb-10">Our Clients</h2>
-              {projects.map((project, index) => {
-                return (
-                  <Project
-                    index={index}
-                    title={project.title}
-                    setModal={setModal}
-                    key={index}
-                  />
-                );
-              })}
-            </div>
-            <Modal modal={modal} projects={projects} />
-            <div
-              className="flex md:hidden p-10 w-[90vw] h-auto glass text-[#ffffff] flex flex-col p-12 "
-              style={{ fontFamily: "'Poppins', sans-serif" }}
+            <h1
+              className="text-[2.5rem] lg:text-[6.5rem] text-[#FFFFFF] text-center cursor-default"
+              style={{ fontFamily: "'Koulen', sans-serif" }}
             >
-              <div className="flex py-4 px-4 justify-around items-center border-b border-gray-500">
-                <div className="h-[6rem] w-auto flex items-center">
+              OUR CLIENTS
+            </h1>
+            <div className="flex flex-wrap gap-2 justify-center items-center px-4 py-2 mx-auto">
+              {[
+                "/clients/dtd.jpg",
+                "/clients/luvlap.jpg",
+                "/clients/tripti.jpg",
+                "/clients/kinderchoice.jpg",
+                "/clients/youmaa.jpg",
+                "/clients/heroto.jpg",
+                "/clients/maple.jpg",
+                "/clients/twistbaby.jpg",
+                "/clients/sweetcherry.jpg",
+                "/clients/fiori.jpg",
+              ].map((src, index) => (
+                <div
+                  key={index}
+                  className="w-[10rem] md:w-[10rem] h-[5rem] rounded-lg overflow-hidden glass"
+                >
                   <Image
-                    src="/clients/sweetcherry.jpg"
-                    alt="image"
-                    width={1000}
-                    height={1000}
-                    className="h-full w-auto object-contain"
+                    className="w-full h-full object-contain"
+                    src={src}
+                    alt={`logo-${index}`}
+                    width={500}
+                    height={500}
                   />
                 </div>
-              </div>
-
-              <div className="flex py-10 px-4 justify-around items-center border-b border-gray-500">
-                <div className="h-[6rem] w-auto flex items-center">
-                  <Image
-                    src="/clients/dtd.jpg"
-                    alt="image"
-                    width={1000}
-                    height={1000}
-                    className="h-full w-auto object-contain"
-                  />
-                </div>
-              </div>
-              <div className="flex py-4 px-4 justify-around items-center border-b border-gray-500">
-                <div className="h-[6rem] w-auto flex items-center">
-                  <Image
-                    src="/clients/tripti.jpg"
-                    alt="image"
-                    width={1000}
-                    height={1000}
-                    className="h-full w-auto object-contain"
-                  />
-                </div>
-              </div>
-              <div className="flex py-4 px-4 justify-around items-center border-b border-gray-500">
-                <div className="h-[6rem] w-auto flex items-center">
-                  <Image
-                    src="/clients/kinderchoice.jpg"
-                    alt="image"
-                    width={1000}
-                    height={1000}
-                    className="h-full w-auto  object-contain"
-                  />
-                </div>
-              </div>
-              <div className="flex py-4 px-4  justify-around items-center border-b border-gray-500">
-                <div className="h-[6rem] w-auto flex items-center">
-                  <Image
-                    src="/clients/youmaa.jpg"
-                    alt="image"
-                    width={1000}
-                    height={1000}
-                    className="h-full w-auto object-contain"
-                  />
-                </div>
-              </div>
-              <div className="flex py-4 px-4 justify-around items-center border-b border-gray-500">
-                <div className="h-[6rem] w-auto flex items-center">
-                  <Image
-                    src="/clients/maple.jpg"
-                    alt="image"
-                    width={1000}
-                    height={1000}
-                    className="h-full w-auto object-contain"
-                  />
-                </div>
-              </div>
-              <div className="flex py-4 px-4 justify-around items-center border-b border-gray-500">
-                <div className="h-[6rem] w-auto flex items-center">
-                  <Image
-                    src="/clients/heroto.jpg"
-                    alt="image"
-                    width={1000}
-                    height={1000}
-                    className="h-full w-auto object-contain"
-                  />
-                </div>
-              </div>
+              ))}
             </div>
             <div className="text-[#ffffff] p-10 flex flex-col justify-center items-center gap-3">
               <h2 className="text-4xl font-semibold">Get started Now!</h2>
@@ -312,7 +247,7 @@ const Page = () => {
               </p>
               <Link href="/contact">
                 <button className="px-4 py-2 text-white font-bold glass">
-                  Start Now
+                  Start Your Project
                 </button>
               </Link>
             </div>
