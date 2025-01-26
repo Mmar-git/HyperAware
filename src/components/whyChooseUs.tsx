@@ -5,7 +5,7 @@ const WhyChooseUs = () => {
   return (
     <div>
       <section
-        className="p-10 w-[500px] md:w-[1000px] lg:w-[1300px] gap-3 columns-2 sm:columns-2 lg:columns-3 xl:columns-3 mx-auto space-y-3"
+        className="py-10 w-[90vw] gap-3 columns-1 sm:columns-2 lg:columns-3 xl:columns-3  space-y-3 text-[#ffffff]"
         style={{
           fontFamily: "'Poppins', sans-serif",
         }}

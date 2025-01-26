@@ -17,21 +17,19 @@ export const links = [
 ]
 
 export const footerLinks = [
-
-    {
-  
-        title: "Web Dev",
-  
-        href: "/Website"
-  
-    },
     {
   
         title: "Branding",
-  
         href: "/Branding"
   
     },
+    {
+  
+        title: "Web Development",
+        href: "/Website"
+  
+    },
+ 
     {
   
         title: "Social Media",

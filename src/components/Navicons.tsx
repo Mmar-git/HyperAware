@@ -49,14 +49,15 @@ const Navicons = () => {
               fontFamily: "'Poppins', sans-serif",
             }}
           >
-            <a href="/Website" className="text-[#FFFFFF] hover:text-neon">
-              Website Development and redesign
-            </a>
             <a href="/Branding" className="text-[#FFFFFF] hover:text-neon">
               Branding
             </a>
+            <a href="/Website" className="text-[#FFFFFF] hover:text-neon">
+              Website Development
+            </a>
+
             <a href="/Social" className="text-[#FFFFFF] hover:text-neon">
-              Social Media Marketing and Management
+              Social Media Marketing
             </a>
             <a href="/Content" className="text-[#FFFFFF] hover:text-neon">
               Content Creation

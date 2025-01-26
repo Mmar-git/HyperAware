@@ -95,9 +95,10 @@ const Footer = () => {
           <div className="flex flex-col">
             <h1 className="font-medium text-lg cursor-default">Services</h1>
             <div className="flex flex-col gap-3 mt-4 text-sm text-gray-500">
-              <Link href="/Website">Website Development and Redesign</Link>
               <Link href="/Branding">Branding</Link>
-              <Link href="/Social">Social Media and Marketing</Link>
+              <Link href="/Website">Website Development</Link>
+
+              <Link href="/Social">Social Media Marketing</Link>
               <Link href="/Content">Content Creation</Link>
               <Link href="/Photo">Photoshoot and Videoshoot</Link>
             </div>
