@@ -282,11 +282,12 @@ const Page = () => {
               {/* Second Item Layout without paragraph (to test auto width/height change) */}
               <ItemLayout className="break-inside-avoid">
                 <h2 className="text-xl font-bold md:text-lg text-left w-full capitalize">
-                  Product Demos
+                  E-commerce Shoots
                 </h2>
                 <p className="font-light text-xs sm:text-sm md:text-sm">
-                  Simplify complex concepts and showcase your products in action
-                  with detailed demo videos.
+                  Bring your products to life with high-quality e-commerce
+                  photography. Showcase every detail with crisp, professional
+                  images that captivate your customers and drive sales.
                 </p>
               </ItemLayout>
             </section>

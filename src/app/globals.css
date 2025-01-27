@@ -86,6 +86,10 @@ a:hover {
                0 0 80px #03bcf4,
                0 0 160px #03bcf4;
 }
+a.no-glow:hover {
+  animation: none !important;
+  text-shadow: none !important;
+}
 .purple{
   animation: glow 1.5s infinite alternate;
   box-shadow: 0 0 10px #341539,
