@@ -12,12 +12,12 @@
     width: 480px;
     height: 650px;
     background: rgba(255, 255, 255, 0.1); /* Use a simpler transparent background */
-  backdrop-filter: blur(20px); /* Reduced blur intensity for better performance */
-  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(30px); /* Reduced blur intensity for better performance */
+  -webkit-backdrop-filter: blur(30px);
   border-radius: 15px; /* Slightly smaller radius for better rendering */
   border: 1px solid rgba(255, 255, 255, 0.1); /* Lighter border for reduced complexity */
 
-
+z-index: 5;
     border-radius: 25px;
     position: relative;
       will-change: transform, width, height;

@@ -5,9 +5,9 @@ import DropdownMenu from "./DropdownMenu";
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
 const link1 = [
-  { id: 1, label: "Website Development", url: "/Website" },
   { id: 1, label: "Branding", url: "/Branding" },
-  { id: 1, label: "Social Media", url: "/Social" },
+  { id: 1, label: "Website Development", url: "/Website" },
+  { id: 1, label: "Social Media Marketing", url: "/Social" },
   { id: 1, label: "Content Creation", url: "/Content" },
   { id: 1, label: "Photography and Videography", url: "/Photo" },
 ];
@@ -94,10 +94,9 @@ const Footer = () => {
         <div className="hidden lg:flex justify-between w-2/3">
           <div className="flex flex-col">
             <h1 className="font-medium text-lg cursor-default">Services</h1>
-            <div className="flex flex-col gap-3 mt-4 text-sm text-gray-500">
+            <div className="flex flex-col gap-3 mt-4 text-sm text-[#ffffff]">
               <Link href="/Branding">Branding</Link>
               <Link href="/Website">Website Development</Link>
-
               <Link href="/Social">Social Media Marketing</Link>
               <Link href="/Content">Content Creation</Link>
               <Link href="/Photo">Photoshoot and Videoshoot</Link>
@@ -105,7 +104,7 @@ const Footer = () => {
           </div>
           <div className="flex flex-col">
             <h1 className="font-medium text-lg cursor-default">About us</h1>
-            <div className="flex flex-col gap-3 mt-4 text-sm text-gray-500">
+            <div className="flex flex-col gap-3 mt-4 text-sm text-[#ffffff]">
               <Link href="/about">Our Story</Link>
             </div>
           </div>
