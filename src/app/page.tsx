@@ -1,22 +1,26 @@
 "use client";
 import React, { useEffect, useState, useRef } from "react";
+import Lenis from "@studio-freight/lenis";
 import ServicesShowcase from "@/components/StackingCards";
 import styles from "./page.module.css";
 import WhyChooseUs from "@/components/whyChooseUs";
 import Background from "@/components/Background";
 import Image from "next/image";
 import { projects } from "@/data";
-import Card from "@/components/Card"; // This is your Card component with the parallax effect
-import CardMobile from "@/components/CardMobile"; // New CardMobile component for small screens
+import Card from "@/components/Card";
+import CardMobile from "@/components/CardMobile";
 import { useScroll } from "framer-motion";
-import Loader from "@/components/Loader"; // Import the loader
+import Loader from "@/components/Loader";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Page = () => {
-  const [isLoading, setIsLoading] = useState(true); // Track if the page is still loading
+  const [isLoading, setIsLoading] = useState(true);
   const [isGlowing, setIsGlowing] = useState(false);
-  const [isSmallScreen, setIsSmallScreen] = useState(false); // To detect small screens
-  const [shouldRenderBackground, setShouldRenderBackground] = useState(true); // Control background rendering
-  const [enableLenis, setEnableLenis] = useState(true); // Enable or disable Lenis scroll based on screen size
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const [shouldRenderBackground, setShouldRenderBackground] = useState(true);
+  const [enableLenis, setEnableLenis] = useState(true);
+  const lenisRef = useRef<Lenis | null>(null);
 
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -24,6 +28,35 @@ const Page = () => {
     offset: ["start start", "end end"],
   });
 
+  // Initialize Lenis smooth scroll
+  useEffect(() => {
+    if (enableLenis) {
+      lenisRef.current = new Lenis({
+        lerp: 0.1,
+        smoothWheel: true,
+        syncTouch: true,
+      });
+
+      // Connect Lenis to ScrollTrigger
+      lenisRef.current.on("scroll", ScrollTrigger.update);
+
+      // GSAP ticker integration
+      gsap.ticker.add((time) => {
+        lenisRef.current?.raf(time * 1000);
+      });
+
+      gsap.ticker.lagSmoothing(0);
+    }
+
+    return () => {
+      if (lenisRef.current) {
+        lenisRef.current.destroy();
+        gsap.ticker.remove(ScrollTrigger.update);
+      }
+    };
+  }, [enableLenis]);
+
+  // Rest of your existing useEffect hooks
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsGlowing(true);
@@ -31,35 +64,28 @@ const Page = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  // Check for device performance and screen size
   useEffect(() => {
     const checkDevicePerformance = () => {
       const isHighPerformance =
-        navigator.hardwareConcurrency > 4 && window.innerWidth > 768; // High-end devices with larger screens
-      setShouldRenderBackground(isHighPerformance); // Set the background rendering condition
-      setIsSmallScreen(window.innerWidth <= 768); // Detect small screens
-
-      // Enable Lenis for screen widths <= 1920px (14-inch devices) and disable for larger screens
+        navigator.hardwareConcurrency > 4 && window.innerWidth > 768;
+      setShouldRenderBackground(isHighPerformance);
+      setIsSmallScreen(window.innerWidth <= 768);
       setEnableLenis(window.innerWidth <= 1920);
     };
 
-    checkDevicePerformance(); // Initial check on mount
-
-    window.addEventListener("resize", checkDevicePerformance); // Re-check on window resize
+    checkDevicePerformance();
+    window.addEventListener("resize", checkDevicePerformance);
     return () => {
       window.removeEventListener("resize", checkDevicePerformance);
     };
   }, []);
 
-  // Initialize or destroy Lenis based on screen size
-
-  // Simulate loading time for demo purposes
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsLoading(false); // Hide loader after 3 seconds (replace with your actual loading logic)
+      setIsLoading(false);
     }, 3000);
 
-    return () => clearTimeout(timer); // Clean up timer
+    return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -114,7 +140,7 @@ const Page = () => {
               </span>
             </h1>
             <p
-              className="text-sm lg:text-xl text-center max-w-3xl cursor-default"
+              className="text-sm lg:text-xl text-center max-w-3xl cursor-default pb-4"
               style={{ fontFamily: "'Poppins', sans-serif" }}
             >
               Drive measurable results with cutting-edge strategies tailored to

@@ -281,12 +281,12 @@ const Page = () => {
               </div>
 
               {/* Right Section */}
-              <div className="w-full lg:w-1/2 h-auto lg:h-[120vh] text-[#ffffff] flex flex-col py-4 gap-6 px-4 sm:px-8">
+              <div className="w-full lg:w-1/2 h-auto  text-[#ffffff] flex flex-col py-4 gap-6 px-4 sm:px-8">
                 <ItemLayout className="break-inside-avoid">
                   <h2 className="text-xl font-bold md:text-lg text-left capitalize">
                     Benefits of Social Media Marketing
                   </h2>
-                  <p className="font-light text-sm">
+                  <p className="font-light text-xs sm:text-sm md:text-sm">
                     Increases Brand Awareness: Build a strong online presence
                     and reach a larger audience through strategic campaigns.
                     <br />
@@ -294,18 +294,13 @@ const Page = () => {
                     with your audience through interactive posts, stories, and
                     live sessions.
                     <br />
-                    Generates Leads & Conversions: Turn followers into customers
-                    with targeted social ads and promotions.
-                    <br />
-                    Provides Valuable Insights: Understand your audience better
-                    with analytics that guide future strategies.
                   </p>
                 </ItemLayout>
                 <ItemLayout className="break-inside-avoid">
                   <h2 className="text-xl font-bold md:text-lg text-left capitalize">
                     Our Proven Process
                   </h2>
-                  <p className="font-light text-sm">
+                  <p className="font-light text-xs sm:text-sm md:text-sm">
                     Audit & Analysis: We start with a comprehensive audit of
                     your current social media performance to identify
                     opportunities for improvement.
@@ -316,17 +311,13 @@ const Page = () => {
                     <br />
                     Content Creation & Scheduling: We create visually appealing,
                     engaging content and schedule it for maximum impact.
-                    <br />
-                    Monitoring & Optimization: We continuously monitor
-                    performance metrics to refine strategies and ensure optimal
-                    results.
                   </p>
                 </ItemLayout>
                 <ItemLayout className="break-inside-avoid">
                   <h2 className="text-xl font-bold md:text-lg text-left capitalize">
                     Transform Your Social Media Presence
                   </h2>
-                  <p className="font-light text-sm">
+                  <p className="font-light text-xs sm:text-sm md:text-sm">
                     At HyperAware, we don’t just manage social media—we create
                     meaningful connections between your brand and your audience.
                     Let us help you grow your online presence, build trust, and

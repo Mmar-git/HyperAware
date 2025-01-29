@@ -333,7 +333,7 @@ const Page = () => {
                   </video>
                 </div>
               </div>
-              <div className="w-full lg:w-1/2 h-auto lg:h-[120vh] text-[#ffffff] flex flex-col py-4 gap-6 px-4 sm:px-8">
+              <div className="w-full lg:w-1/2 h-auto text-[#ffffff] flex flex-col py-4 gap-6 px-4 sm:px-8">
                 <ItemLayout className="break-inside-avoid">
                   <h2 className="text-xl font-bold md:text-lg text-left w-full capitalize">
                     Why Visual Content Matters

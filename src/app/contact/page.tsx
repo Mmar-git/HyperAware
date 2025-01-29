@@ -73,6 +73,8 @@ const Page: React.FC = () => {
     fullName: "",
     email: "",
     phone: "",
+    interests: "",
+    projectBudget: "",
     query: "",
   });
 
@@ -101,7 +103,8 @@ const Page: React.FC = () => {
           email: formData.email,
           phone: formData.phone,
           query: formData.query,
-          interests: selectedInterests.join(", "), // Joining selected interests into a comma-separated string
+          interests: selectedInterests.join(", "),
+          projectBudget: formData.projectBudget || "Not specified", // Joining selected interests into a comma-separated string
         },
         "t1va5CBC6itxfu0KX" // Your EmailJS user ID (Public Key)
       )
@@ -112,6 +115,8 @@ const Page: React.FC = () => {
           fullName: "",
           email: "",
           phone: "",
+          projectBudget: "",
+          interests: "",
           query: "",
         });
         setSelectedInterests([]); // Clear selected interests after submission
@@ -245,7 +250,18 @@ const Page: React.FC = () => {
                     onChange={handleChange}
                   />
                 </div>
-
+                <div className="flex flex-col w-full">
+                  <label className="text-gray-400 mb-2">
+                    Project Budget (Optional)
+                  </label>
+                  <input
+                    name="projectBudget"
+                    className="p-2 bg-transparent border-b text-gray-400 placeholder-gray-400 focus:outline-none focus:text-[#03bcf4] transition-all duration-300"
+                    placeholder="Enter your budget"
+                    value={formData.projectBudget || ""} // Ensure it's optional
+                    onChange={handleChange}
+                  />
+                </div>
                 {/* Interests Section */}
                 <div className="w-full flex flex-wrap mt-4 gap-4">
                   <label className="block text-gray-400 mb-2 w-full">
