@@ -12,7 +12,25 @@ const link1 = [
   { id: 1, label: "Photography and Videography", url: "/Photo" },
 ];
 const link2 = [{ id: 1, label: "Our Story", url: "/about" }];
-const link3 = [{ id: 1, label: "Contact Form", url: "/contact" }];
+const link3 = [
+  { id: 1, label: "Contact Form", url: "/contact" },
+  { id: 2, label: "Email", url: "mailto:info@hyperaware.in" },
+  {
+    id: 3,
+    label: "Facebook",
+    url: "https://www.facebook.com/people/HyperAware/61569192098398/?mibextid=wwXIfr&rdid=ad29Or5UZppVHkpb&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BGHvGPEso%2F%3Fmibextid%3DwwXIfr",
+  },
+  {
+    id: 4,
+    label: "Instagram",
+    url: "https://www.instagram.com/hyperaware_creative_agency/",
+  },
+  {
+    id: 5,
+    label: "Whatsapp",
+    url: "https://wa.me/918584948902?text=Hello%2C%20I%20want%20to%20know%20more%20about%20your%20services.",
+  },
+];
 
 const Footer = () => {
   const [formData, setFormData] = useState({
@@ -112,6 +130,36 @@ const Footer = () => {
             <Link href="/contact">
               <h1 className="font-medium text-lg ">Contact Us</h1>
             </Link>
+            <div className="flex flex-col gap-3 mt-4 text-sm text-[#ffffff]">
+              <Link
+                href="mailto:info@hyperaware.in"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Email
+              </Link>
+              <Link
+                href="https://www.facebook.com/people/HyperAware/61569192098398/?mibextid=wwXIfr&rdid=ad29Or5UZppVHkpb&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BGHvGPEso%2F%3Fmibextid%3DwwXIfr"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Facebook
+              </Link>
+              <Link
+                href="https://www.instagram.com/hyperaware_creative_agency/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Instagram
+              </Link>
+              <Link
+                href="https://wa.me/918584948902?text=Hello%2C%20I%20want%20to%20know%20more%20about%20your%20services."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Whatsapp
+              </Link>
+            </div>
           </div>
         </div>
       </div>

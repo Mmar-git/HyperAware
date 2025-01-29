@@ -198,6 +198,19 @@ const Page: React.FC = () => {
                     />
                   </Link>
                   <Link
+                    href="https://www.facebook.com/people/HyperAware/61569192098398/?mibextid=wwXIfr&rdid=ad29Or5UZppVHkpb&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BGHvGPEso%2F%3Fmibextid%3DwwXIfr"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      src="/facebook.png"
+                      alt=""
+                      width={1200}
+                      height={1200}
+                      className="h-[5rem] w-[5rem] md:h-[5rem] md:w-[5rem] -mt-[14px]"
+                    />
+                  </Link>
+                  <Link
                     href="mailto:info@hyperaware.in"
                     target="_blank"
                     rel="noopener noreferrer"
