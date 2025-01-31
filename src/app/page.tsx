@@ -81,7 +81,9 @@ const Page = () => {
             >
               STAY AHEAD. <span className="mx-2">STAY</span>
               <span
-                className={`${isGlowing ? "glow" : "flicker"} text-[#0e3742]`}
+                className={`${
+                  isGlowing ? "glow" : "flicker"
+                } text-[#0e3742] mx-2`}
               >
                 HYPERAWARE
               </span>

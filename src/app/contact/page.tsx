@@ -207,7 +207,7 @@ const Page: React.FC = () => {
                       alt=""
                       width={1200}
                       height={1200}
-                      className="h-[5rem] w-[5rem] md:h-[5rem] md:w-[5rem] -mt-[14px]"
+                      className="h-[3.5rem] w-[3.5rem] md:h-[4.5rem] md:w-[4.5rem] -mt-[10px]"
                     />
                   </Link>
                   <Link
@@ -230,7 +230,7 @@ const Page: React.FC = () => {
               <form onSubmit={handleSubmit} className="flex flex-col gap-4">
                 {/* Form Inputs */}
                 <div className="flex flex-col md:flex-row md:gap-4">
-                  <div className="flex flex-col w-full md:w-1/2">
+                  <div className="flex flex-col w-full md:w-1/2 mb-4 md:mb-0">
                     <label className="text-gray-400 mb-2">Full Name</label>
                     <input
                       name="fullName"
