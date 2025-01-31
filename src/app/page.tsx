@@ -98,8 +98,7 @@ const Page = () => {
               className="text-sm lg:text-xl text-center max-w-xl cursor-default"
               style={{ fontFamily: "'Poppins', sans-serif" }}
             >
-              Emphasize the agency’s expertise in anticipating trends Creating
-              proactive marketing solutions
+              We connect, engage, and convert with psychology-driven strategies.
             </p>
           </div>
 
@@ -119,9 +118,7 @@ const Page = () => {
               className="text-sm lg:text-xl text-center max-w-3xl cursor-default pb-4"
               style={{ fontFamily: "'Poppins', sans-serif" }}
             >
-              Drive measurable results with cutting-edge strategies tailored to
-              your business. Unlock growth with innovative solutions designed to
-              amplify your digital presence.
+              Don’t just stand out - become unforgettable.
             </p>
 
             <main
