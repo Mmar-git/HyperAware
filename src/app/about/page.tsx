@@ -225,6 +225,8 @@ const Page = () => {
                 "/clients/twistbaby.jpg",
                 "/clients/sweetcherry.jpg",
                 "/clients/fiori.jpg",
+                "/clients/littlemiss.jpg",
+                "/clients/minibee.jpg",
               ].map((src, index) => (
                 <div
                   key={index}
