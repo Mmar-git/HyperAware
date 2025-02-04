@@ -96,7 +96,7 @@ const Page: React.FC = () => {
 
     emailjs
       .send(
-        "service_eek0dx9", // Your EmailJS service ID
+        "service_lsbeu8t", // Your EmailJS service ID
         "template_mjv16ju", // Your EmailJS template ID
         {
           fullName: formData.fullName,
