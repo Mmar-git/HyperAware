@@ -77,13 +77,18 @@ const Page = () => {
           <div className="flex flex-col h-screen justify-center items-center text-[#FFFFFF] px-2 mx-auto">
             <h1
               className="hidden md:flex text-[2.5rem] lg:text-[6.5rem] text-center cursor-default"
-              style={{ fontFamily: "'Koulen', sans-serif" }}
+              style={{
+                fontFamily: "'Koulen', sans-serif",
+                userSelect: "none",
+                pointerEvents: "none",
+              }}
             >
               STAY AHEAD. <span className="mx-2">STAY</span>
               <span
                 className={`${
                   isGlowing ? "glow" : "flicker"
                 } text-[#0e3742] mx-2`}
+                style={{ userSelect: "none", pointerEvents: "none" }}
               >
                 HYPERAWARE
               </span>
@@ -96,7 +101,11 @@ const Page = () => {
             </h1>
             <p
               className="text-sm lg:text-xl text-center max-w-xl cursor-default"
-              style={{ fontFamily: "'Poppins', sans-serif" }}
+              style={{
+                fontFamily: "'Poppins', sans-serif",
+                userSelect: "none",
+                pointerEvents: "none",
+              }}
             >
               We connect, engage, and convert with psychology-driven strategies.
             </p>
@@ -105,18 +114,27 @@ const Page = () => {
           <div className="flex flex-col items-center text-[#FFFFFF] px-2 mx-auto">
             <h1
               className="text-[2.5rem] lg:text-[6.5rem] text-center cursor-default"
-              style={{ fontFamily: "'Koulen', sans-serif" }}
+              style={{
+                fontFamily: "'Koulen', sans-serif",
+                userSelect: "none",
+                pointerEvents: "none",
+              }}
             >
               WHAT WE{" "}
               <span
                 className={`${isGlowing ? "glow" : "flicker"} text-[#0e3742]`}
+                style={{ userSelect: "none", pointerEvents: "none" }}
               >
                 OFFER
               </span>
             </h1>
             <p
               className="text-sm lg:text-xl text-center max-w-3xl cursor-default pb-4"
-              style={{ fontFamily: "'Poppins', sans-serif" }}
+              style={{
+                fontFamily: "'Poppins', sans-serif",
+                userSelect: "none",
+                pointerEvents: "none",
+              }}
             >
               Don’t just stand out - become unforgettable.
             </p>
@@ -146,18 +164,27 @@ const Page = () => {
           <div className="flex flex-col items-center text-[#FFFFFF] px-2 mx-auto">
             <h1
               className="text-[2.5rem] lg:text-[6.5rem] text-center cursor-default"
-              style={{ fontFamily: "'Koulen', sans-serif" }}
+              style={{
+                fontFamily: "'Koulen', sans-serif",
+                userSelect: "none",
+                pointerEvents: "none",
+              }}
             >
               LEVEL UP YOUR{" "}
               <span
                 className={`${isGlowing ? "glow" : "flicker"} text-[#0e3742]`}
+                style={{ userSelect: "none", pointerEvents: "none" }}
               >
                 BUSINESS!
               </span>
             </h1>
             <p
               className="text-sm lg:text-xl text-center max-w-3xl cursor-default"
-              style={{ fontFamily: "'Poppins', sans-serif" }}
+              style={{
+                fontFamily: "'Poppins', sans-serif",
+                userSelect: "none",
+                pointerEvents: "none",
+              }}
             >
               Attract more clients, serve them better and keep them longer.
             </p>
@@ -166,7 +193,11 @@ const Page = () => {
 
           <h1
             className="text-[2.5rem] lg:text-[6.5rem] text-[#FFFFFF] text-center cursor-default"
-            style={{ fontFamily: "'Koulen', sans-serif" }}
+            style={{
+              fontFamily: "'Koulen', sans-serif",
+              userSelect: "none",
+              pointerEvents: "none",
+            }}
           >
             MEET OUR CLIENTS
           </h1>
