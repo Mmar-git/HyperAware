@@ -34,18 +34,27 @@ const Page = () => {
   // Check for device performance and screen size
   useEffect(() => {
     const checkDevicePerformance = () => {
-      const isHighPerformance =
-        navigator.hardwareConcurrency > 4 && window.innerWidth > 768; // High-end devices with larger screens
-      setShouldRenderBackground(isHighPerformance); // Set the background rendering condition
-      setIsSmallScreen(window.innerWidth <= 768); // Detect small screens
+      try {
+        const isHighPerformance =
+          navigator.hardwareConcurrency > 4 && window.innerWidth > 768; // High-end devices with larger screens
+        setShouldRenderBackground(isHighPerformance); // Render dynamic background if high performance
+        setIsSmallScreen(window.innerWidth <= 768); // Detect small screens
 
-      // Enable Lenis for screen widths <= 1920px (14-inch devices) and disable for larger screens
-      setEnableLenis(window.innerWidth <= 1920);
+        // Enable Lenis for screen widths <= 1920px (14-inch devices) and disable for larger screens
+        setEnableLenis(window.innerWidth <= 1920);
+      } catch (error) {
+        console.error("Error checking device performance:", error);
+        // Fallback: Render the static background
+        setShouldRenderBackground(false);
+        // Optionally, set defaults for other states if necessary:
+        setIsSmallScreen(window.innerWidth <= 768);
+        setEnableLenis(window.innerWidth <= 1920);
+      }
     };
 
     checkDevicePerformance(); // Initial check on mount
-
     window.addEventListener("resize", checkDevicePerformance); // Re-check on window resize
+
     return () => {
       window.removeEventListener("resize", checkDevicePerformance);
     };
