@@ -227,6 +227,12 @@ const Page = () => {
                 "/clients/fiori.jpg",
                 "/clients/littlemiss.jpg",
                 "/clients/minibee.jpg",
+                "/clients/adorne.jpg",
+                "/clients/tiny2ns.jpg",
+                "/clients/taeko.jpg",
+                "/clients/tango.jpg",
+                "/clients/simply.jpg",
+                "/clients/maisoli.jpg",
               ].map((src, index) => (
                 <div
                   key={index}
